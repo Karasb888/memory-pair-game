@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function(){
 const CARDS_MAX = 16;
 var cardsAtributes = ['spanch1', 'spanch2', 'spanch3', 'spanch4', 'spanch5', 'spanch6', 'spanch7', 'spanch8'];
 cardsAtributes = cardsAtributes.concat(cardsAtributes);
@@ -44,14 +45,13 @@ function gameRestart(){
   openCards = [];
 };
 
-document.addEventListener('DOMContentLoaded', function(){
   const GAME_CONTAINER = document.getElementById('game');
   const CARDS = document.querySelectorAll('.flip-container');
   rebuildGameCards(CARDS, cardsAtributes);
 
   GAME_CONTAINER.addEventListener('click', function(e){
     let clickedCard = e.target.closest('.flip-container');
-    
+
     if(clickedCard.getAttribute(OPEN_CARD_ATTRIBUTE) === null && clickedCard.getAttribute('self') === null){
       clickedCard.setAttribute('self', 'self');
       clickedCard.classList.add('flip');
