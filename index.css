@@ -16,8 +16,8 @@ body{
 }
 .game__card, .flipper{
   width: 100px;
-  height: 100px;
   box-sizing: border-box;
+  height: 100px;
 }
 /* entire container, keeps perspective */
 .flip-container {
